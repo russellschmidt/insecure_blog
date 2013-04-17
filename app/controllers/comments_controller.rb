@@ -1,11 +1,10 @@
 class CommentsController < ApplicationController
-  before_filter :find_post
-
   def new
-    @comment = @post.comments.build
+    @comment = Comment.new
   end
 
   def create
+    @post = Post.find(params[:post_id])
     @comment = @post.comments.build(params[:comment])
 
     if @comment.save
@@ -13,11 +12,5 @@ class CommentsController < ApplicationController
     else
       render action: :new
     end
-  end
-
-  private
-
-  def find_post
-    @post = Post.find(params[:post_id])
   end
 end
