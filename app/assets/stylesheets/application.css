@@ -11,3 +11,13 @@
  *= require_self
  *= require_tree .
  */
+
+body {
+  width: 960px;
+  margin: 1em auto;
+}
+
+.flash {
+  color: blue;
+  background-color: #eee;
+}

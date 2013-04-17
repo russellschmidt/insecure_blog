@@ -7,6 +7,7 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
+  <h1>InsecureBlog admin</h1>
   <nav>
     <%= link_to "Posts", admin_posts_path %>
     |
@@ -15,5 +16,9 @@
 
 <%= yield %>
 
+<footer>
+  <hr>
+  <%= link_to "Main site", root_path %>
+</footer>
 </body>
 </html>

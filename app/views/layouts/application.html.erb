@@ -8,7 +8,14 @@
 </head>
 <body>
 
+  <h1>InsecureBlog</h1>
+  <p class="flash"><%= notice %></p>
 <%= yield %>
+
+<footer>
+  <hr>
+  <%= link_to "Admin login", admin_root_path %>
+</footer>
 
 </body>
 </html>
