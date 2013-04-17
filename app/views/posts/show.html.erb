@@ -1,0 +1,14 @@
+<%= render @post %>
+
+<hr>
+
+<h3 id="comments">Comments</h3>
+
+<%= link_to "Leave a comment", new_post_comment_path(@post) %>
+
+<% @post.comments.approved.each do |comment| %>
+  <p>
+    <%= comment.content %>
+    <cite>- <%= comment.author %></cite>
+  </p>
+<% end %>
