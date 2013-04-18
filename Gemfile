@@ -7,6 +7,8 @@ gem 'rails', '3.2.12'
 gem "faker", "~> 1.1.2"
 gem 'sqlite3'
 
+#close your hole - security hole
+gem "strong_parameters", "~> 0.2.0"
 
 # Gems used only for assets and not required
 # in production environments by default.

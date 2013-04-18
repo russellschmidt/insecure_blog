@@ -6,7 +6,7 @@ class CommentsController < ApplicationController
   end
 
   def create
-    @comment = @post.comments.build(params[:comment])
+    @comment = @post.comments.build(comment_params)
 
     if @comment.save
       redirect_to @post, notice: "Your comment has been saved and is awaiting review by our staff"
@@ -19,5 +19,9 @@ class CommentsController < ApplicationController
 
   def find_post
     @post = Post.find(params[:post_id])
+  end
+
+  def comment_params
+    params.require(:comment).permit(:content, :author)
   end
 end
